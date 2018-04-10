@@ -13,7 +13,7 @@ VERSION_ID=`awk -F= '/^VERSION_ID/{print $2}' /etc/os-release`
 # Get the distro family 
 DEBIAN=`strindex "$ID_LIKE" 'debian'`
 FEDORA=`strindex "$ID_LIKE" 'fedora'`
-SUSE=`strindex "$ID_LIKE" 'suse'
+SUSE=`strindex "$ID_LIKE" 'suse'`
 
 # if debian based
 if [ "$DEBIAN" -ne -1 ]; then
@@ -64,7 +64,7 @@ eval "sudo $INSTALL rxvt-unicode $YES"
 # install nmtui
 eval "sudo $INSTALL NetworkManager-tui  $YES"
 
-# instll ntpdate (for vm timesyncing)
+# install ntpdate (for vm timesyncing)
 #eval "sudo $INSTALL ntpdate $YES"
 
 # Example for installing Vundle, the Vim dependency manager
