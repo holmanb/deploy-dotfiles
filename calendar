@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+##
+# Name: Google
+# Author: Brett Holman
+# Date: 4-24-3018
+# Description: This is intended to be run from dmenu 
+# or the command line.  It launches google calendar.
+##
+
+# Forms the search query
+SEARCH="$1"
+COUNT="$#"
+while [[ $COUNT -gt 1 ]]; do
+    shift
+	SEARCH="$SEARCH+$1"
+    COUNT=$((COUNT-1))
+done
+
+# Build URL using search query (url gives Google less 
+# info than they typically get)
+URL="https://calendar.google.com/calendar"
+
+# Run in background
+(firefox -new-window $URL) &

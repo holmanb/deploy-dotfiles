@@ -10,6 +10,7 @@ cp .Xdefaults ~/
 cp .printActiveIP.sh ~/
 mkdir ~/bin/ -p 
 cp google ~/bin/
+cp calendar ~/bin/
 echo "Success! [dotfiles copied]"
 echo 
 
