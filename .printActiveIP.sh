@@ -24,4 +24,4 @@ for word in $ipline; do
 done; 
 
 # print the last ip in the route
-echo ${addr[-1]}
+echo ${addr[${#addr[@]}-1]}
